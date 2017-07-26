@@ -1,5 +1,5 @@
 # SimpleCustomizeView
-a collection of customize view for Android
+一个自用自定义view的集合项目
 
 ## View
 ### GradientImageView
