@@ -15,7 +15,8 @@
         android:layout_margin="50dp"
         android:src="@mipmap/bg"
         app:gradientStart="leftBottom"
-        app:startColor="#8d47df30"
-        app:endColor="#92b92929"
+        app:startColor="#8d4de436"
+        app:endColor="#92282bec"
+        app:gradientEnable="false"
         android:scaleType="fitXY"/>
 </LinearLayout>
