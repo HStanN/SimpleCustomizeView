@@ -4,9 +4,17 @@
         <attr name="gradientStart" format="enum">
             <enum name="leftTop" value="1"/>
             <enum name="leftBottom" value="2"/>
+            <enum name="rightTop" value="3"/>
+            <enum name="rightBottom" value="4"/>
+            <enum name="center" value="5"/>
         </attr>
         <attr name="startColor" format="color"/>
         <attr name="endColor" format="color"/>
+        <attr name="gradientType" format="enum">
+            <enum name="linear" value="1"/>
+            <enum name="radial" value="2"/>
+            <enum name="sweep" value="3"/>
+        </attr>
         <attr name="gradientEnable" format="boolean"/>
     </declare-styleable>
 </resources>
