@@ -6,7 +6,9 @@
 可以为图片添加一个线性渐变蒙板的imageview
 
 ![Source](https://github.com/HStanN/SimpleCustomizeView/blob/master/image/source_image.png)
-![Gradient](https://github.com/HStanN/SimpleCustomizeView/blob/master/image/gradiented.png)
+![linear](https://github.com/HStanN/SimpleCustomizeView/blob/master/image/lefttop.png)
+![radial](https://github.com/HStanN/SimpleCustomizeView/blob/master/image/radial.png)
+![sweep](https://github.com/HStanN/SimpleCustomizeView/blob/master/image/sweep.png)
 #### 属性说明:
  - gradientType : 渐变方式(Linear,Radial,Sweep)
  - gradientStart : 渐变起点（leftTop,leftBottom,RightTop,RightBottom,center）!注意：在Linear渐变中渐变终点为起点对角线的另一点
