@@ -3,5 +3,6 @@
 
 ## View
 ### [GradientImageView](https://github.com/HStanN/SimpleCustomizeView/blob/master/GradientImageView.md)
+### [RingChartView](https://github.com/HStanN/SimpleCustomizeView/blob/master/RingChartView.md)
  
 ### 新内容请等待···
