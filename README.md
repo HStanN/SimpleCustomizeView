@@ -2,7 +2,7 @@
 一个自用自定义view的集合项目
 
 ## View
-### GradientImageView
+### [GradientImageView]()
 可以为图片添加一个线性渐变蒙板的imageview
 
 ![Source](https://github.com/HStanN/SimpleCustomizeView/blob/master/image/source_image.png)
