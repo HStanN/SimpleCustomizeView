@@ -6,17 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#bcbcbc"
     tools:context="com.hug.simplecustomizeview.MainActivity">
 
-
-    <com.hug.simplecustomizeview.view.GradientImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_margin="50dp"
-        android:src="@mipmap/bg"
-        app:startColor="#e0ff4346"
-        app:endColor="#d1267ff2"
-        app:gradientStart="leftTop"
-        app:gradientType="linear"
-        android:scaleType="fitXY"/>
+    <com.hug.simplecustomizeview.view.ringChart.RingChartView
+        android:id="@+id/ring_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        app:bigRingRadius="100dp"
+        app:smallCircleRadius="30dp"
+        app:ringTextSize="15sp"
+        />
 </LinearLayout>

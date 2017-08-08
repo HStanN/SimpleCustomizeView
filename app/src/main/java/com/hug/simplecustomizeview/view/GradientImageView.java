@@ -65,7 +65,7 @@ public class GradientImageView extends AppCompatImageView {
         gradientStart = ta.getInt(R.styleable.GradientImageView_gradientStart, LEFT_TOP);
         gradientType = ta.getInt(R.styleable.GradientImageView_gradientType, LINEAR);
         gradientEnable = ta.getBoolean(R.styleable.GradientImageView_gradientEnable, true);
-
+        ta.recycle();
     }
 
     private void initPoint() {
@@ -119,19 +119,6 @@ public class GradientImageView extends AppCompatImageView {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         if (gradientEnable) {
-            switch (gradientType) {
-                case LINEAR:
-                    shader = new LinearGradient(startPoint.x, startPoint.y, endPoint.x, endPoint.y, startColor,
-                            endColor, Shader.TileMode.CLAMP);
-                    break;
-                case RADIAL:
-                    shader = new RadialGradient(startPoint.x, startPoint.y, radius, startColor, endColor, Shader
-                            .TileMode.CLAMP);
-                    break;
-                case SWEEP:
-                    shader = new SweepGradient(startPoint.x, startPoint.y, startColor, endColor);
-                    break;
-            }
             paint.setShader(shader);
             canvas.drawRect(getPaddingLeft(), getPaddingTop(),
                     getMeasuredWidth() - getPaddingRight(), getMeasuredHeight() - getPaddingBottom(), paint);
@@ -142,5 +129,23 @@ public class GradientImageView extends AppCompatImageView {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         initPoint();
+        initShader();
+    }
+
+    private void initShader() {
+        switch (gradientType) {
+            case LINEAR:
+                shader = new LinearGradient(startPoint.x, startPoint.y, endPoint.x, endPoint.y, startColor,
+                        endColor, Shader.TileMode.CLAMP);
+                break;
+            case RADIAL:
+                shader = new RadialGradient(startPoint.x, startPoint.y, radius, startColor, endColor, Shader
+                        .TileMode.CLAMP);
+                break;
+            case SWEEP:
+                shader = new SweepGradient(startPoint.x, startPoint.y, startColor, endColor);
+                Path path = new Path();
+                break;
+        }
     }
 }
